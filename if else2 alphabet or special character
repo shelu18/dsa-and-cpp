@@ -1,0 +1,23 @@
+Program to check alphabet, digit or special character
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char al;
+     cout<<"enter the al\n";
+     cin>>al;
+     
+     if((al>='a' && al<='z')||(al>='A' && al<='Z')){
+cout<<al<<" "<<"alphabet";
+}
+ else if (al>='0' &&al<='9'){
+cout<<al<<" "<<" is  digit";
+}
+else 
+cout<<al<<" "<<"is special character";
+    return 0;
+}
