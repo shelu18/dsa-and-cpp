@@ -1,0 +1,51 @@
+# dsa-and-cpp
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    
+    
+    char oper;
+cout<<"choose the operator /,*, -,+"<<endl;
+
+cin>>oper;
+
+int a,b;
+cout<<"enter the value of a and  b"<<endl;
+cin>>a>>b;
+
+
+switch (oper){
+    
+    
+    case '*':
+    cout<<"multiplication of two no is "<<a*b<<endl;
+    
+    break;
+    
+    
+    case '-':
+    cout<<"sub is "<<a-b<<endl;
+    
+    break;
+    
+    
+    case '+' :
+    
+    cout<<"sum is "<<a+b;
+    
+    break;
+    
+    
+    case '/' :
+    cout<<"div of two no is "<<a/b;
+    
+    default :
+    cout<<"bhai opperator galat choose kiya he aapne ";
+    break;
+}
+ 
+
+    return 0;
+}
