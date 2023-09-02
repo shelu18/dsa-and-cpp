@@ -1,0 +1,19 @@
+//finding length of string via function 
+#include<iostream>
+using namespace std;
+int  getlength(char name[]) {
+    int count =0;
+    for(int i=0;name[i] != '\0';i++){
+        count++;
+    }
+return count;
+}
+
+
+int main (){
+    char s[20];
+    cout<<"enter character array";
+    cin>>s;
+    cout<<getlength(s);
+
+}
