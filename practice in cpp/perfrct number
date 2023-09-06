@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+// Function to check if a number is perfect
+int findPerfect(int num) {
+    int sum = 0;
+    for (int i = 1; i <= num / 2; i++) {
+        if (num % i == 0) {
+            sum += i;
+        }
+    }
+    return sum == num;  //jisme sum ki value nuk ke equal he usee return kar do
+}
+
+int main() {
+    int n;
+    cout << "Enter a  number: ";
+    cin >> n;
+        cout << "Perfect numbers between 1 and " << n << ": ";
+        for (int i = 1; i <= n; i++) {
+            if (findPerfect(i)) {  //agar give no. tak koi bhi us function me lie karta he to uski value return ho jaegii
+                cout << i << " ";
+            }
+        }
+        cout << endl;
+    
+
+    return 0;
+}
