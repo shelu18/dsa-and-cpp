@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string replaceSpace(string &str) {
+    string temp = "";
+    for (int i = 0; i < str.length(); i++) {
+        if (str[i] == ' ') {
+            temp.push_back('@');
+        } else {
+            temp.push_back(str[i]);
+        }
+    }
+    return temp;
+}
+
+int main() {
+    string s;
+    cout << "Enter the string: ";
+    
+    getline(cin, s);  // Read the entire line including spaces
+    
+    // Call the replaceSpace function and assign the result back to s
+    s = replaceSpace(s);
+    
+    cout << s;
+
+    return 0;
+}
