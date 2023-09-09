@@ -1,0 +1,63 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Define a function named "compressionwithcount" that takes a string "str" as input
+string compressionwithcount(string str) {
+    // Check if the input string is empty
+    if (str.empty()) {
+        return ""; // If empty, return an empty string
+    }
+
+    // Initialize an empty string "compressed" to store the compressed result
+    string compressed;
+
+    // Initialize a character variable "current_char" with the first character of the input string
+    char current_char = str[0];
+
+    // Initialize an integer variable "count" to 1 (there's at least one occurrence of the first character)
+    int count = 1;
+
+    // Start a loop to iterate through the input string character by character, starting from the second character
+    for (int i = 1; i < str.length(); i++) {
+        // Check if the current character is equal to the "current_char" character
+        if (str[i] == current_char) {
+            // If they are the same, increment the "count" to count consecutive characters
+            count++;
+        } else {
+            // If they are different, append "current_char" and its count to the "compressed" string
+            compressed += current_char + to_string(count);
+            
+            // Update "current_char" to the new character "str[i]"
+            current_char = str[i];
+            
+            // Reset the "count" to 1 for the new character
+            count = 1;
+        }
+    }
+
+    // Add the last character and its count to the "compressed" string
+    compressed += current_char + to_string(count);
+
+    // Return the "compressed" string
+    return compressed;
+}
+
+// Main function
+int main() {
+    string s;
+
+    // Prompt the user to enter a string
+    cout << "Enter the string: ";
+
+    // Read the string from the user
+    cin >> s;
+
+    // Call the "compressionwithcount" function to compress the input string and store the result
+    string compressedString = compressionwithcount(s);
+
+    // Display the compressed string
+    cout << "Compressed string: " << compressedString << endl;
+
+    return 0;
+}
